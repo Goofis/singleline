@@ -1,0 +1,636 @@
+/*
+Theme Name: Single Line
+Author: Filippos Tsagkris
+Author URI: http://tsagkris.com/
+Description: A forever-unfinished, perpetually changing, modern, no-sidebar wordpress theme.
+Version: 1.0
+License: GNU GPLv3
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+/* Reset */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0px;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Main Styling */
+
+html {
+	background: white;
+	font-size: 16px;
+}
+
+body {
+	font-family: 'Fira Sans', sans-serif;
+}
+
+#wrapper {
+	display: block;
+	width: 600px;
+	margin: 0px auto;
+	padding: 100px 20px 0;
+}
+
+#header {
+	text-align: center;
+}
+
+#tagline {
+	padding-bottom: 15px;
+	text-align: center;
+	font-weight: 300;
+	font-size: 1em;
+	color: #767676;
+}
+
+#footer {
+	text-align: center;
+	width: 600px;
+	font-size: 0.875em;
+	padding-bottom: 50px;
+}
+
+/* HR */
+
+hr {
+	background-color: rgba(0, 0, 0, 0.1);
+	border: 0;
+	height: 1px;
+	margin-bottom: 15px;
+}
+
+.under hr {
+	width: 300px;
+	margin: 0 auto 10px;
+}
+
+.over hr {
+	width: 300px;
+	height: 2px;
+	margin: 2px auto 15px;
+}
+
+/* Paragraphs, Quotes, Blockquotes */
+
+p {
+	margin-bottom: 24px;
+}
+
+q {
+	quotes: "«" "»";
+	color: #767676;
+	font-style: italic;
+}
+
+q:before {
+	content: open-quote;
+}
+
+q:after {
+	content: close-quote;
+}
+
+blockquote {
+	quotes: none;
+	color: #767676;
+	font-style: italic;
+}
+
+blockquote:before,
+blockquote:after {
+	content: "";
+	content: none;
+}
+
+blockquote.right, blockquote.left {
+	quotes: none;
+	width: 180px;
+	font-size: 1.5em;
+	color: #1E73BE;
+	padding-top: 24px;
+	margin: 24px 0;
+}
+
+blockquote.right {
+	float: right;
+	border-left: 3px solid #1E73BE;
+	padding-left: 24px;
+	margin-left: 27px;
+}
+
+blockquote.left {
+	float: left;
+	border-right: 3px solid #1E73BE;
+	padding-right: 24px;
+	margin-right: 27px;
+}
+
+/* Text Styling */
+
+h1 {
+	font-weight: 700;
+	font-size: 2.25em;
+	padding-bottom: 10px;
+}
+
+h2 {
+	font-weight: 400;
+	font-size: 1.875em;
+}
+
+h3 {
+	font-weight: 400;
+	font-size: 1.375em;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+cite,
+dfn,
+em,
+i {
+	font-style: italic;
+}
+
+/* Post-Page Styling */
+
+.feature-img {
+	text-align: center;
+	margin: 0 auto 10px;
+}
+
+.post-title{
+	padding: 0 50px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.date {
+	text-align: center;
+	margin: -10px 20px 0;
+	font-weight: 300;
+	color: #767676;
+}
+
+.text {
+	margin: -5px 20px 0;
+	padding-bottom: 20px;
+	font-weight: 300;
+	font-size: 1.125em;
+	line-height: 1.7;
+}
+
+/* Links */
+
+a:link,
+a:visited {
+	color: #000;
+	text-decoration: none;
+	-o-transition:.5s ease-out;
+	-ms-transition:.5s ease-out;
+	-moz-transition:.5s ease-out;
+	-webkit-transition:.5s ease-out;
+	transition:.5s ease-out;
+}
+
+a:hover,
+a:active {
+	color: #1E73BE;
+}
+
+.text a:link,
+.text a:visited {
+	color: #1E73BE;
+	text-decoration: underline;
+	-o-transition:.5s ease-out;
+	-ms-transition:.5s ease-out;
+	-moz-transition:.5s ease-out;
+	-webkit-transition:.5s ease-out;
+	transition:.5s ease-out;
+}
+
+.text a:hover,
+.text a:active {
+	color: #2B79D6;
+	text-decoration: none;
+}
+
+/* Contact form */
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 0.8em;
+	line-height: 1.5;
+}
+
+.contact-form input[type="submit"] {
+	color: #fff;
+	background: #1E73BE;
+	font-size: 1em;
+	padding: 7px 15px;
+	cursor: pointer;
+	border: none;
+	border-radius: 4px;
+}
+
+.contact-form input[type="submit"]:hover {
+	background: #2B79D6;
+}
+
+.contact-form input[type="submit"]:active {
+	background: #000;
+}
+
+/* Top navigation */
+
+#top-nav {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#top-nav ul li {
+	list-style-type: none;
+	display: inline;
+	padding-left: 10px;
+}
+
+#top-nav ul li:first-child {
+	padding-left: 0px;
+}
+
+#top-nav li:before {
+	content: "/";
+	padding-right: 10px;
+}
+
+#top-nav ul li:first-of-type:before {
+	content: none;
+}
+
+/* Social links */
+
+#social {
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+#social ul li {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+#facebook a:hover, #facebook a:link, #facebook a:visited,
+#twitter a:hover, #twitter a:link, #twitter a:visited,
+#instagram a:hover, #instagram a:link, #instagram a:visited,
+#flickr a:hover, #flickr a:link, #flickr a:visited,
+#youtube a:hover, #youtube a:link, #youtube a:visited,
+#vimeo a:hover, #vimeo a:link, #vimeo a:visited {
+	-o-transition: none;
+	-ms-transition: none;
+	-moz-transition: none;
+	-webkit-transition: none;
+	transition: none;
+}
+
+#facebook a:hover,
+#twitter a:hover,
+#instagram a:hover,
+#flickr a:hover,
+#youtube a:hover,
+#vimeo a:hover {
+	background-position: -32px 0px;
+	cursor: pointer;
+ }
+
+#facebook a,
+#twitter a,
+#instagram a,
+#flickr a,
+#youtube a,
+#vimeo a {
+	display: block;
+	margin:0 auto;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+	text-decoration: none;
+	border: 0;
+	border-radius: 50px;
+	width: 32px;
+	height: 32px;
+	background-size: 64px 32px;
+}
+
+#facebook a {
+	width: 32px;
+	height: 32px;
+	background: url('facebookp2x.png') no-repeat left top;
+	background-size: 64px 32px;
+}
+
+#twitter a {
+	width: 32px;
+	height: 32px;
+	background: url('twitterp2x.png') no-repeat left top;
+	background-size: 64px 32px;
+
+}
+
+#instagram a {
+	width: 32px;
+	height: 32px;
+	background: url('instagramp2x.png') no-repeat left top;
+	background-size: 64px 32px;
+}
+
+#flickr a {
+	width: 32px;
+	height: 32px;
+	background: url('flickrp2x.png') no-repeat left top;
+	background-size: 64px 32px;
+}
+
+#youtube a {
+	width: 32px;
+	height: 32px;
+	background: url('youtubep2x.png') no-repeat left top;
+	background-size: 64px 32px;
+}
+
+#vimeo a {
+	width: 32px;
+	height: 32px;
+	background: url('vimeop2x.png') no-repeat left top;
+	background-size: 64px 32px;
+}
+
+/* Loop navigation */
+
+.loop-nav {
+	text-align: center;
+	margin: 0 auto;
+	padding: 10px 0 20px;
+	width: 550px;
+}
+
+.loop-nav #nav-previous,
+.loop-nav #nav-next {
+	width: 240px;
+	display: inline-block;
+}
+
+#nav-previous {
+	text-align: right;
+}
+
+#nav-next {
+	text-align: left;
+}
+
+/* Saber underlines */
+
+.saber-dark {
+	position: relative;
+	top: -8px;
+	border: none;
+	border-radius: 5px;
+	height: 10px;
+	background: linear-gradient(to bottom, white, #FF2727, white, white, #FF2727, white);
+}
+
+.saber-light {
+	position: relative;
+	top: -8px;
+	border: none;
+	border-radius: 5px;
+	height: 10px;
+	background: linear-gradient(to bottom, white, #50DEFF, white, white, #50DEFF, white);
+}
+
+#starwars-dark {
+	width: 136px;
+}
+
+#starwars-light {
+	width: 125px;
+}
+
+/* Alignment */
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+blockquote.alignleft,
+figure.wp-caption.alignleft,
+img.alignleft {
+	margin: 7px 24px 7px 0;
+}
+
+.wp-caption.alignleft {
+	margin: 7px 14px 7px 0;
+}
+
+blockquote.alignright,
+figure.wp-caption.alignright,
+img.alignright {
+	margin: 7px 0 7px 24px;
+}
+
+.wp-caption.alignright {
+	margin: 7px 0 7px 14px;
+}
+
+blockquote.aligncenter,
+img.aligncenter,
+.wp-caption.aligncenter {
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+.site-content blockquote.alignleft,
+.site-content blockquote.alignright {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	padding-top: 17px;
+	width: 50%;
+}
+
+.site-content blockquote.alignleft p,
+.site-content blockquote.alignright p {
+	margin-bottom: 17px;
+}
+
+.wp-caption {
+	margin-bottom: 24px;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0;
+}
+
+.wp-caption {
+	color: #767676;
+}
+
+.wp-caption-text {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+	font-size: 0.875em;
+	font-style: italic;
+	line-height: 1.5;
+	margin: 9px 0;
+}
+
+div.wp-caption .wp-caption-text {
+	padding-right: 10px;
+}
+
+div.wp-caption.alignright img[class*="wp-image-"],
+div.wp-caption.alignright .wp-caption-text {
+	padding-left: 10px;
+	padding-right: 0;
+}
+
+.wp-smiley {
+	border: 0;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Responsive design */
+
+@media only screen
+  and (max-device-width: 736px) {
+	#tagline {
+		font-size: 1.33em;
+	}
+
+	#footer {
+		font-size: 1em;
+	}
+
+	blockquote.right, blockquote.left {
+		font-size: 1em;
+	}
+
+	h1 {
+		font-size: 3em;
+	}
+
+	h2 {
+		font-size: 2.5em;
+	}
+
+	h3 {
+		font-size: 1.33em;
+	}
+
+	.date {
+		font-size: 1.33em;
+	}
+
+	.text {
+		font-size: 2em;
+	}
+
+	#top-nav {
+		font-size: 1.5em;
+		margin: 20px 0 30px;
+	}
+
+	#social {
+		margin: 20px 0 10px;
+	}
+
+	.loop-nav {
+		font-size: 1.2em;
+	}
+
+	.saber-dark,
+	.saber-light {
+		height: 15px;
+		margin-top: -10px;
+		border-radius: 7px;
+	}
+
+	#starwars-dark {
+		width: 242px;
+	}
+
+	#starwars-light {
+		width: 220px;
+	}
+}
+
+/*Colors*
+#1E73BE dark blue
+#2B79D6 light blue
+#999 grey
+#767676 caption grey
+#FF2727 saber-dark
+#50DEFF saber-light
+*/
