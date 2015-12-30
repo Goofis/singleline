@@ -612,6 +612,19 @@ div.wp-caption.alignright .wp-caption-text {
 		font-size: 2em;
 	}
 
+	.contact-form input[type="submit"] {
+	color: #fff;
+	background: #1E73BE;
+	font-size: 1em;
+	padding: 7px 15px;
+	border: none;
+	border-radius: 4px;
+	}
+
+	.contact-form input[type="submit"]:active {
+		background: #000;
+	}
+
 	#top-nav {
 		font-size: 1.5em;
 		margin: 20px 0 30px;
