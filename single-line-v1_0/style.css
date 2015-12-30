@@ -279,20 +279,31 @@ a:active {
 
 .contact-form input[type="submit"] {
 	color: #fff;
-	background: #1E73BE;
+	width: 120px;
+	height: 35px;
+	background: url('sendit2x.png') no-repeat left top;
+	background-size: 240px 35px;
 	font-size: 1em;
 	padding: 7px 15px;
 	cursor: pointer;
 	border: none;
 	border-radius: 4px;
+	-o-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-webkit-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 }
 
 .contact-form input[type="submit"]:hover {
-	background: #2B79D6;
+	background-position: -120px 0px;
+	padding: 7px 28px 7px 2px;
+	cursor: pointer;
 }
 
 .contact-form input[type="submit"]:active {
-	background: #000;
+	background-position: 0 0;
+	padding: 7px 2px 7px 28px;
 }
 
 /* Top navigation */
